@@ -16,10 +16,29 @@ the Adafruit article.
 - `gem install sinatra thin rmagick`
 - `sudo ruby app.rb`
 
-```
-DELETE / - all leds off
-PUT /i/r/g/b - set leds at position i to [r,g,b] and change immediately
-POST / - set multiple positions at once; pass a list of position,r,g,b in the body:
-i,r1,g1,b1
-j,r2,g2,g2
+```sh
+# all leds off
+> curl -X DELETE http://raspberry-pi:4567/
+
+# led at position 5 to red
+> curl -X PUT http://raspberry-pi:4567/5/255/0/0
+
+# led at position i to [r,g,b]
+> curl -X PUT http://raspberry-pi:4567/i/r/g/b
+
+# set mutiple positions at once
+> curl -X POST --data-binary @- http://raspberry-pi:4567/
+5,255,0,0
+6,255,255,255
+7,0,0,255
+11,255,0,0
+12,255,255,255
+13,0,0,255
+17,255,0,0
+18,255,255,255
+19,0,0,255
+21,255,0,0
+22,255,255,255
+23,0,0,255
+^D
 ```

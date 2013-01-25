@@ -1,4 +1,6 @@
 class LedStrip
+  attr_reader :length, :device
+
   # gamma correction + 7-bit color conversion
   # https://gist.github.com/3309494
   @@gamma = 256.times.map { |i|
@@ -12,11 +14,18 @@ class LedStrip
     clear!
   end
 
+  # set pixels to off
   def clear!
     # r,g,b per pixel + 1 latch byte at the end
     @bytes = [@@gamma[0],@@gamma[0],@@gamma[0]]*@length + [0]
   end
 
+  def reset!
+    clear!
+    write!
+  end
+
+  # set pixel at i to [r,g,b]
   def []=(offset, v)
     r,g,b = v
     i = offset*3
@@ -26,6 +35,7 @@ class LedStrip
     @bytes[i+2] = @@gamma[b]
   end
 
+  # flush the state of pixels in the buffer to the strip
   def write!
     @dev = File.open(@device, "w") if (@dev.nil? || @dev.closed?)
     @dev.write @bytes.pack("c*")
