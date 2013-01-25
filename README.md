@@ -16,6 +16,7 @@ the Adafruit article.
 - `apt-get install ruby ruby-dev imagemagick libmagickwand-dev`
 - :coffee: break
 - `gem install sinatra thin rmagick`
+- another :coffee: break, writing to sd is slow
 - `sudo ruby app.rb`
 
 ```sh
