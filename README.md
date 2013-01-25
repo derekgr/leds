@@ -19,7 +19,7 @@ the Adafruit article.
 - :coffee: break
 - `gem install sinatra thin rmagick`
 - another :coffee: break, writing to sd is slow
-- `sudo ruby app.rb`
+- `sudo ./app.rb` - you need to run as root to acess the SPI device
 
 ```sh
 # all leds off
