@@ -55,3 +55,7 @@ the Adafruit article.
 urls=https://github.com/images/icons/emoji/boom.png,https://github.com/images/icons/emoji/camel.png&timeout=0.5
 ^D
 ```
+
+## Now What?
+
+Take a long-exposure photo in a dark location of you moving around with the RGB strip while it's displaying images. See what happens. It helps to have a second person!
