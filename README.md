@@ -58,4 +58,4 @@ urls=https://github.com/images/icons/emoji/boom.png,https://github.com/images/ic
 
 ## Now What?
 
-Take a long-exposure photo in a dark location of you moving around the RGB strip while it's displaying images. See what happens. It helps to have a second person!
+Take a long-exposure photo in a dark location of you moving around the strip while it's displaying images. See what happens. It helps to have a second person!
