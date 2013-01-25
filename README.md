@@ -1,4 +1,4 @@
-A light photography experiment.
+A light painting experiment.
 
 ![:boom::camel:](https://f.cloud.github.com/assets/60566/96449/147aea60-66ae-11e2-9c8c-d507f145ebbb.png)
 
