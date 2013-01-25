@@ -1,3 +1,5 @@
+A light photography experiment.
+
 ## Parts
 
 - Raspberry Pi with [Occidentalis](http://learn.adafruit.com/adafruit-raspberry-pi-educational-linux-distro/occidentalis-v0-dot-2) for hardware SPI
@@ -40,5 +42,13 @@ the Adafruit article.
 21,255,0,0
 22,255,255,255
 23,0,0,255
+^D
+
+# :boom:
+> curl -X POST http://raspberry-pi:4567/boom
+
+# :boom: :camel: in 0.5s stripes
+> curl -X POST --data-binary @- http://raspberry-pi:4567/urls
+urls=https://github.com/images/icons/emoji/boom.png,https://github.com/images/icons/emoji/camel.png&timeout=0.5
 ^D
 ```
