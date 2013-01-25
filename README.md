@@ -1,6 +1,6 @@
-A light painting experiment.
+A light painting experiment: hook a Raspberry Pi to an LED strip, control and script the display over the network.
 
-![:boom::camel:](https://f.cloud.github.com/assets/60566/96449/147aea60-66ae-11e2-9c8c-d507f145ebbb.png)
+![:boom: :camel:](https://f.cloud.github.com/assets/60566/96449/147aea60-66ae-11e2-9c8c-d507f145ebbb.png)
 
 ## Parts
 
@@ -15,11 +15,12 @@ Inspired by [this Adafruit article](http://learn.adafruit.com/light-painting-wit
 - Connect the Raspberry Pi and the LED strip to power; I connected the +5V GPIO pin on the Pi into the power supply as well as +5V on the LED strip, as per
 the Adafruit article.
 - Connect the Pi's [MOSI and SCLK pins to DI and CI on the LED strip, respectively](http://learn.adafruit.com/assets/1589)
-- `apt-get install ruby ruby-dev imagemagick libmagickwand-dev`
-- :coffee: break while those install
-- `gem install sinatra thin rmagick`
-- another :coffee: break, writing to SD is slow
-- `sudo ./app.rb` - you need to run as root to access the SPI device
+- On the Raspberry Pi:
+  - `apt-get install ruby ruby-dev imagemagick libmagickwand-dev`
+  - :coffee: break while those install
+  - `gem install sinatra thin rmagick`
+  - another :coffee: break, writing to SD is slow
+  - `sudo ./app.rb` - you need to run as root to access the SPI device
 
 ```sh
 # all leds off
@@ -58,4 +59,6 @@ urls=https://github.com/images/icons/emoji/boom.png,https://github.com/images/ic
 
 ## Now What?
 
-Take a long-exposure photo in a dark location of you moving around the strip while it's displaying images. See what happens. It helps to have a second person!
+- Take a long-exposure photo in a dark location of you moving around the strip while it's displaying images. See what happens. It helps to have a second person!
+- Wire the strip and the Pi with a mobile power source to a stable, mobile platform (like the bicycle platform in the Adafruit article), and have someone with a camera
+and a computer script cool effects while you slowly bike back and forth.
