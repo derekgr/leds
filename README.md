@@ -1,5 +1,7 @@
 A light photography experiment.
 
+![:boom::camel:](https://f.cloud.github.com/assets/60566/96449/147aea60-66ae-11e2-9c8c-d507f145ebbb.png)
+
 ## Parts
 
 - Raspberry Pi with [Occidentalis](http://learn.adafruit.com/adafruit-raspberry-pi-educational-linux-distro/occidentalis-v0-dot-2) for hardware SPI
