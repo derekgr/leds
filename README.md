@@ -10,15 +10,15 @@ A light painting experiment.
 
 ## Instructions
 
-Pretty much [this](http://learn.adafruit.com/light-painting-with-raspberry-pi), TL;DR:
+Inspired by [this Adafruit article](http://learn.adafruit.com/light-painting-with-raspberry-pi). TL;DR:
 
 - Connect the Raspberry Pi and the LED strip to power; I connected the +5V GPIO pin on the Pi into the power supply as well as +5V on the LED strip, as per
 the Adafruit article.
 - Connect the Pi's [MOSI and SCLK pins to DI and CI on the LED strip, respectively](http://learn.adafruit.com/assets/1589)
 - `apt-get install ruby ruby-dev imagemagick libmagickwand-dev`
-- :coffee: break
+- :coffee: break while those install
 - `gem install sinatra thin rmagick`
-- another :coffee: break, writing to sd is slow
+- another :coffee: break, writing to SD is slow
 - `sudo ./app.rb` - you need to run as root to access the SPI device
 
 ```sh
