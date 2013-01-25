@@ -6,7 +6,7 @@ A light painting experiment.
 
 - Raspberry Pi with [Occidentalis](http://learn.adafruit.com/adafruit-raspberry-pi-educational-linux-distro/occidentalis-v0-dot-2) for hardware SPI driver support
 - [Addressable RGB LED strip](http://adafruit.com/products/306)
-- A 5V power supply with ~500mA for the Raspberry Pi and ~2A per meter of strip; I used [this](https://www.adafruit.com/products/658)
+- A 5V power supply with ~500mA for the Raspberry Pi and ~1.5A per meter of strip at peak current; I used [this](https://www.adafruit.com/products/658), which should be overkill for 1 strip
 
 ## Instructions
 
