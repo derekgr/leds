@@ -20,6 +20,7 @@ require 'sinatra'
 put '/:i/:r/:g/:b' do
   strip[params[:i].to_i] = [params[:r].to_i, params[:g].to_i, params[:b].to_i]
   strip.write!
+  "ok"
 end
 
 # set many pixels
@@ -32,11 +33,13 @@ post '/' do
   end
 
   strip.write!
+  "ok"
 end
 
 # reset
 delete '/' do
   strip.reset!
+  "ok"
 end
 
 # :boom:
@@ -45,6 +48,7 @@ post '/boom' do
   boom.render(0.01)
   sleep(1)
   strip.reset!
+  "ok"
 end
 
 # download the image and render it
@@ -54,6 +58,7 @@ post '/url' do
 
   timeout = params[:timeout].to_f || 0.01
   LedImage.from_url(url, strip).render(timeout) if url
+  "ok"
 end
 
 # download a series of images to precache, then render in sequence
@@ -71,4 +76,5 @@ post '/urls' do
   images.each do |image|
     image.render(timeout)
   end
+  "ok"
 end
