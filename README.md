@@ -22,6 +22,8 @@ the Adafruit article.
   - another :coffee: break, writing to SD is slow
   - `sudo ./app.rb` - you need to run as root to access the SPI device
 
+Then send commands to the LED strip over HTTP.
+
 ```sh
 # all leds off
 > curl -X DELETE http://raspberry-pi:4567/
